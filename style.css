@@ -269,11 +269,12 @@ footer article ul{
     background-color: white;
     border-radius: 3px;
     margin-top: 10px;
-    display: flex;
+    display: none;
     justify-content: space-between;
     height: 40px;
     align-items: center;
     padding: 0px 10px;
+    border: 2px solid red;
 
 }
 .shortening-box #long-link, #generated-link{
@@ -308,9 +309,5 @@ footer article ul{
 }
 
 .handle-empty-input{
-    display: none;
-}
-
-.result-box{
     display: none;
 }

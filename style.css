@@ -310,3 +310,7 @@ footer article ul{
 .handle-empty-input{
     display: none;
 }
+
+.result-box{
+    display: none;
+}

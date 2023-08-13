@@ -1,8 +1,10 @@
 # URL Shortening App
 
-This App is a landing page and it is integrate with the shrtcode API 
+This App is a landing page and it is integrate with the "shrtcode API" to generate short links 
 
-Users are able to:
+## Features
+
+users are able to:
 
 - Shorten any valid URL
 - Copy the shortened link to their clipboard in a single click
@@ -10,4 +12,18 @@ Users are able to:
     - The input field is empty
     - The input text is not a valid link
 
-Other features such as using the app by depending on device screen, list of all shorterned links, etc are coming soon
+if a device screen width-size is '375px' or less the page is blank.
+
+## Upcoming Features
+
+- responsiveness
+- list of all shorterned links
+- others
+
+## Visit Site
+
+- visit my site here: https://gedeonge1.github.io/url-shortening-app/
+
+## Develoment Branch
+
+- ckeck the codebase: https://github.com/gedeonge1/url-shortening-app/tree/develop

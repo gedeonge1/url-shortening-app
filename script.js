@@ -19,4 +19,4 @@ async function fetchShortLink(){
     console.error(error.message)
    } 
 }
-
+shortenBtn.addEventListener('click', fetchShortLink)

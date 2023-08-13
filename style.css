@@ -310,3 +310,9 @@ footer article ul{
 .handle-empty-input{
     display: none;
 }
+
+@media only screen and (max-width: 375px){
+    body{
+        display: none;
+    }
+}

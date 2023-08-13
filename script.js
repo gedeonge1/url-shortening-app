@@ -20,3 +20,9 @@ async function fetchShortLink(){
    } 
 }
 shortenBtn.addEventListener('click', fetchShortLink)
+
+function copyNewUrl(){
+    generatedLink.select()
+    navigator.clipboard.writeText(generatedLink.value)
+}
+copyBtn.addEventListener('click', copyNewUrl)

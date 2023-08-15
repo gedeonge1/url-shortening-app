@@ -4,10 +4,10 @@ let generatedLink = document.querySelector('#generated-link')
 let copyBtn = document.querySelector('.copy')
 let emptyInputText = document.querySelector('.handle-empty-input')
 let resultBox = document.querySelector('.result-box')
-
+const listLinks = []
 async function fetchShortLink(){
     const data = await fetch(`https://api.shrtco.de/v2/shorten?url=${longLink.value}`)
-    longLink.value = ''
+    
     try{
     if(!data.ok){
         emptyInputText.style.display = 'block'
@@ -18,6 +18,13 @@ async function fetchShortLink(){
         const jsonResult = await data.json()
         const  newLink = jsonResult.result.short_link2
         generatedLink.value = newLink 
+
+        listLinks.push(newLink)
+        console.log(listLinks)
+
+
+
+
    }}catch(error){
     console.error(error.message)
    } 
@@ -29,3 +36,4 @@ function copyNewUrl(){
     navigator.clipboard.writeText(generatedLink.value)
 }
 copyBtn.addEventListener('click', copyNewUrl)
+

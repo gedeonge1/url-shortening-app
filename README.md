@@ -8,17 +8,17 @@ users are able to:
 
 - Shorten any valid URL
 - Copy the shortened link to their clipboard in a single click
+- list of current shorterned links
 - Receive an error message when the form is submitted if:
     - The input field is empty
     - The input text is not a valid link
 
-if a device screen width-size is '375px' or less the page is blank.
+if a device screen width-size is '960px' or less the page is blank.
 
 ## Upcoming Features
 
 - responsiveness
-- list of all shorterned links
-- others
+
 
 ## Visit Site
 

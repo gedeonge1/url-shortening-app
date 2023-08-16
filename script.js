@@ -19,9 +19,10 @@ async function fetchShortLink(){
         const  newLink = jsonResult.result.short_link2 
 
         listLinks.push(newLink)
+        let reversedList = listLinks.reverse()
 
         let htmlList = ''
-        for(let i = 0; i < listLinks.length; i++){
+        for(let i = 0; i < reversedList.length; i++){
             let singleLink = listLinks[i]
             html = `<section class="result-box">
                     <input type="text" class="generated-link" value= '${singleLink}' readonly>
@@ -37,8 +38,9 @@ async function fetchShortLink(){
 
         function copyNewUrl(event) {
             let generatedLink = event.target.parentNode.querySelector('.generated-link');
-            generatedLink.select();
             navigator.clipboard.writeText(generatedLink.value);
+            event.target.textContent = 'Copied!'
+            event.target.style.backgroundColor = 'hsl(257, 27%, 26%)'
         }
         
        

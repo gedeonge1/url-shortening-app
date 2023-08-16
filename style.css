@@ -87,7 +87,7 @@ h1{
 
 main{
     background-color: rgb(217, 217, 217);
-    height: 1000px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -119,6 +119,7 @@ h2{
     position: relative;
     top: -10%;
     margin-top: 100px;  
+    padding-bottom: 200px;  
 }
 
 .box{
@@ -132,12 +133,12 @@ h2{
 
 .box-2{
     position: relative;
-    top: 30%;
+    top: 50px;
 }
 
 .box-3{
     position: relative;
-    top: 40%;
+    top: 100px;
 }
 .box .img{
     background-color: hsl(260, 8%, 14%);
@@ -269,7 +270,7 @@ footer article ul{
     background-color: white;
     border-radius: 3px;
     margin-top: 10px;
-    display: none;
+    display: flex;
     justify-content: space-between;
     height: 40px;
     align-items: center;

@@ -4,7 +4,9 @@ let generatedLink = document.querySelector('#generated-link')
 let copyBtn = document.querySelector('.copy')
 let emptyInputText = document.querySelector('.handle-empty-input')
 let resultBox = document.querySelector('.result-box')
+let flexResultBox =document.querySelector('.flex-result-box')
 const listLinks = []
+
 async function fetchShortLink(){
     const data = await fetch(`https://api.shrtco.de/v2/shorten?url=${longLink.value}`)
     
@@ -14,16 +16,22 @@ async function fetchShortLink(){
         resultBox.style.display = 'none'
     } else{ 
         emptyInputText.style.display = 'none'
-        resultBox.style.display = 'flex'
         const jsonResult = await data.json()
-        const  newLink = jsonResult.result.short_link2
-        generatedLink.value = newLink 
+        const  newLink = jsonResult.result.short_link2 
 
         listLinks.push(newLink)
-        console.log(listLinks)
 
-
-
+        let htmlList = ''
+        for(let i = 0; i < listLinks.length; i++){
+            let singleLink = listLinks[i]
+            html = `<section class="result-box">
+                    <input type="text" id="generated-link" value= '${singleLink}' readonly>
+                    <button class="copy">Copy</button>
+                    </section>`
+            htmlList += html
+        }
+        flexResultBox.innerHTML = htmlList
+        
 
    }}catch(error){
     console.error(error.message)
@@ -31,9 +39,9 @@ async function fetchShortLink(){
 }
 shortenBtn.addEventListener('click', fetchShortLink)
 
-function copyNewUrl(){
-    generatedLink.select()
-    navigator.clipboard.writeText(generatedLink.value)
-}
-copyBtn.addEventListener('click', copyNewUrl)
+// function copyNewUrl(){
+//     generatedLink.select()
+//     navigator.clipboard.writeText(generatedLink.value)
+// }
+//copyBtn.addEventListener('click', copyNewUrl)
 

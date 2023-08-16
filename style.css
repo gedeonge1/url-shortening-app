@@ -277,7 +277,7 @@ footer article ul{
     padding: 0px 10px;
 
 }
-.shortening-box #long-link, #generated-link{
+.shortening-box #long-link, .generated-link{
     border: none;
     height: 40px;
     width: 70%;
@@ -295,7 +295,7 @@ footer article ul{
     border:1px solid hsl(260, 8%, 14%);
 }
 
-#generated-link:focus{
+.generated-link:focus{
     outline: none;
 }
 

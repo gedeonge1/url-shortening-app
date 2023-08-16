@@ -30,19 +30,18 @@ async function fetchShortLink(){
             htmlList += html
         }
         flexResultBox.innerHTML = htmlList
-        let generatedLink = document.querySelector('.generated-link')
+        let copyButtons = document.querySelectorAll('.copy');
+        copyButtons.forEach(button => {
+            button.addEventListener('click', copyNewUrl)
+        })
 
-        function copy(){
-            function copyNewUrl(){
-                generatedLink.select()
-                navigator.clipboard.writeText(generatedLink.value)
-            }
-            let copyBtn = document.querySelector('.copy')
-            copyBtn.addEventListener('click', copyNewUrl)
-            
+        function copyNewUrl(event) {
+            let generatedLink = event.target.parentNode.querySelector('.generated-link');
+            generatedLink.select();
+            navigator.clipboard.writeText(generatedLink.value);
         }
-
-        copy()
+        
+       
         
    }}catch(error){
     console.error(error.message)
